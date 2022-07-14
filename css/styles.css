@@ -107,6 +107,10 @@ address {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+.navigation:hover,
+:focus {
+  color: var(--color-accent);
+}
 
 .logo {
   color: var(--color-text);
@@ -119,8 +123,6 @@ address {
   margin-right: 94px;
 }
 
-.link :hover,
-:focus,
 .current {
   color: var(--color-accent);
 }
@@ -163,21 +165,16 @@ address {
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  fill: var(--color-contact);
-  object-fit: cover;
+  fill:currentColor;
 }
-.icon-email:hover {
-  fill: var(--color-accent);
-}
+
 .icon-tel {
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  fill: var(--color-contact);
+  fill:currentColor;
 }
-.icon-tel:hover {
-  fill: var(--color-accent);
-}
+
 
 /* hero */
 .hero {
@@ -299,7 +296,9 @@ address {
 }
 
 .fone-icon {
-  width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   background: var(--color-button);
   border-radius: 4px;
@@ -307,9 +306,12 @@ address {
 }
 
 .icon {
-  width: 70px;
-  height: 70px;
-  margin: 25px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  
 }
 
 .work {
@@ -404,18 +406,29 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.social-svg:hover {
-  background-color: #2196f3;
-  fill: var(--color-wite);
-}
+  border-radius: 50%;
+  fill: var(--color-icon);
 
+}
 .social-svg {
   width: 44px;
   height: 44px;
-  fill: var(--color-icon);
-  border-radius: 50%;
+  color: currentColor;
+ 
+
 }
+.social:hover {
+  background-color: var(--color-accent);
+  fill: var(--color-wite);
+}
+.social:focus {
+  background-color: var(--color-accent);
+  fill: var(--color-wite);
+}
+
+
+
+
 
 /* секция сылок на сайты клиентов*/
 
@@ -431,30 +444,32 @@ address {
   justify-content: space-between;
 }
 
-.clients-li {
+.clients-link {
   width: 170px;
   height: 92px;
-}
-
-.clients-link {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  color: var(--color-icon);
 }
 .clients-icon {
   width: 106px;
   height: 60px;
-  fill: var(--color-icon);
+  fill: currentColor;
+ 
 }
-.clients-icon:hover,
-:focus {
-  fill: var(--color-accent);
+.clients-link:hover
+ {
+  color: var(--color-accent);
+ 
 }
 
+.client-link :focus{
+  color: var(--color-accent);
+ 
+}
 /* footer */
 
 .footer {
@@ -551,10 +566,16 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
 }
-.social-svg-footer:hover {
-  background-color: #2196f3;
-  fill: var(--color-wite);
+.social-footer:hover {
+  background-color: var(--color-accent);
+ 
+}
+
+.social-footer:focus {
+  background-color:var(--color-accent);
+  
 }
 
 .social-svg-footer {
@@ -563,6 +584,7 @@ address {
   fill: var(--color-wite);
   background-color: var(--color-icon-footer);
   border-radius: 50%;
+  color:currentColor;
 }
 
 /* portfolio */
@@ -652,14 +674,19 @@ address {
 .img-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
-.img-item:hover {
+/* .img-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+} */
 
 .border-shadow {
   display: block;
   text-decoration: none;
+}
+
+.border-shadow :hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .benefits {
